@@ -111,7 +111,7 @@ for(i in 1:a){
 cours_e=cbind(cours_e,n)
 cours_s=cours_e[order(cours_e$sigle), ]
 c=a
-cours=matrix(nrow = c,ncol=6)
+cours=matrix(nrow = 1,ncol=6)
 cours=data.frame(cours)
 cours[1,1]=cours_s[1,1]
 cours[1,2]=cours_s[1,2]
@@ -122,37 +122,24 @@ cours[1,6]=cours_s[1,6]
 colnames(cours)<-c("sigle","credits","obligatoire","laboratoire","libre")
 h=1
 m=2
+boite=vector(length = 6)
 for(i in 2:a){
   if(cours_s[i,6]==1 & cours_s[i,1]!=cours[(m-1),1]|cours_s[i,6]>1 & cours_s[i,1]!=cours[(m-1),1]){
-    cours[m,1]=cours_s[i,1]
-    cours[m,2]=cours_s[i,2]
-    cours[m,3]=cours_s[i,3]
-    cours[m,4]=cours_s[i,4]
-    cours[m,5]=cours_s[i,5]
-    cours[m,6]=cours_s[i,6]
+    for (j in 1:6) {
+      boite[j]=cours_s[i,j]
+    }
+    cours=rbind(cours,boite)
     h=cours_s[i,6]
     m=m+1
   }else if(cours_s[i,6]>h & cours_s[i,1]==cours[(m-1),1]){
     m=m-1
-    cours[m,1]=cours_s[i,1]
-    cours[m,2]=cours_s[i,2]
-    cours[m,3]=cours_s[i,3]
-    cours[m,4]=cours_s[i,4]
-    cours[m,5]=cours_s[i,5]
-    cours[m,6]=cours_s[i,6]
+    for (j in 1:6) {
+      cours[m,j]=cours_s[i,j]
+    }
     m=m+1
     h=cours_s[i,6]
-  }else{
-    cours=cours[-c,]
-    c=c-1
   }
 }
-cours=cours[-66,]
-cours=cours[-65,]
-cours=cours[-64,]
-cours=cours[-63,]
-cours=cours[-62,]
-cours=cours[-61,]
 cours=cours[,-6]
 
 noeuds1=read.table("etudiant_Alexis_Nadya_Edouard_Penelope.txt",header=TRUE)
@@ -175,34 +162,36 @@ noeuds9=read.csv2("noeuds_cvl_jl_jl_mp_xs.csv")
 noeuds9=noeuds9[,-1]
 colnames(noeuds9)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
 noeuds_r=rbind(noeuds1,noeuds2,noeuds3,noeuds4,noeuds5,noeuds6,noeuds7,noeuds8,noeuds9)
-noeuds_r[is.na(noeuds_r)] = "NA"
-noeuds_e=distinct(noeuds_r)
+noeuds_NA=noeuds_r
+noeuds_NA[is.na(noeuds_NA)] = "NA"
+noeuds_e=distinct(noeuds_NA)
 a2=nrow(noeuds_e)
 noeuds_e=cbind(noeuds_e,n2)
 noeuds_s=noeuds_e[order(noeuds_e$nom_prenom), ]
 noeuds=matrix(ncol=5,nrow=1)
-c2=2
-boite=vector(length = 5)
+c=2
+boite2=vector(length = 5)
 noeuds[1,1]=noeuds_s[1,1]
 noeuds[1,2]=noeuds_s[1,2]
 noeuds[1,3]=noeuds_s[1,3]
 noeuds[1,4]=noeuds_s[1,4]
 noeuds[1,5]=noeuds_s[1,5]
 for (i in 2:a2) {
-  if(noeuds[(c2-1),1]!=noeuds_s[i,1]){
+  if(noeuds[(c-1),1]!=noeuds_s[i,1]){
     for (j in 1:5) {
-      boite[j]=noeuds_s[i,j]
+      boite2[j]=noeuds_s[i,j]
     }
-    noeuds=rbind(noeuds,boite)
-    c2=c2+1
+    noeuds=rbind(noeuds,boite2)
+    c=c+1
   }
-  else if(noeuds[(c2-1),2]=="NA"|noeuds[(c2-1),3]=="NA"|noeuds[(c2-1),4]=="NA"|noeuds[(c2-1),5]=="NA"){
-    c2=c2-1
+  else if(noeuds[(c-1),2]=="NA"|noeuds[(c-1),3]=="NA"|noeuds[(c-1),4]=="NA"|noeuds[(c-1),5]=="NA"){
+    c=c-1
     for (j in 1:5) {
-      noeuds[c2,j]=noeuds_s[i,j]
+      noeuds[c,j]=noeuds_s[i,j]
     }
-    c2=c2+1
+    c=c+1
   }
 }
 colnames(noeuds)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
 noeuds=data.frame(noeuds)
+noeuds[noeuds=="NA"]<- NA

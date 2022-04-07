@@ -190,3 +190,4 @@ for(i in 1:a2){
 }
 noeuds_e=cbind(noeuds_e,n2)
 noeuds_s=noeuds_e[order(noeuds_e$nom_prenom), ]
+Test=2+2

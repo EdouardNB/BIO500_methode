@@ -1,4 +1,4 @@
-setwd("C:/Users/menui/Desktop/Universit?/M?thode en ?cologie computationnelle")
+setwd("C:/Users/menui/Desktop/Université/Méthode en écologie computationnelle")
 library(RSQLite)
 con <- dbConnect(SQLite(), dbname="equipe.db")
 noeuds_sql<- '
@@ -40,8 +40,8 @@ FOREIGN KEY (cours) REFERENCES cours(sigle)
 dbSendQuery(con,collaboration_sql)
 dbListTables(con)
 
-#Donn?es
-setwd("C:/Users/menui/Desktop/Universit?/M?thode en ?cologie computationnelle/donnees_BIO500")
+#Données
+setwd("C:/Users/menui/Desktop/Université/Méthode en écologie computationnelle/donnees_BIO500")
 library("dplyr")
 coll1_r=read.table("collaboration_Alexis_Nadya_Edouard_Penelope.txt",header=TRUE)
 coll1=distinct(coll1_r)
@@ -178,15 +178,32 @@ noeuds_r=rbind(noeuds1,noeuds2,noeuds3,noeuds4,noeuds5,noeuds6,noeuds7,noeuds8,n
 noeuds_r[is.na(noeuds_r)] = "NA"
 noeuds_e=distinct(noeuds_r)
 a2=nrow(noeuds_e)
-b2=nrow(noeuds_r)
-n2=vector(length = a2)
-for(i in 1:a2){
-  n2[i]=0
-  for (j in 1:b2) {
-    if(noeuds_e[i,1]==noeuds_r[j,1] & noeuds_e[i,2]==noeuds_r[j,2] & noeuds_e[i,3]==noeuds_r[j,3] & noeuds_e[i,4]==noeuds_r[j,4] & noeuds_e[i,5]==noeuds_r[j,5]){
-      n2[i]= n2[i]+1
-    }
-  }
-}
 noeuds_e=cbind(noeuds_e,n2)
 noeuds_s=noeuds_e[order(noeuds_e$nom_prenom), ]
+noeuds=matrix(ncol=5,nrow=1)
+c2=2
+boite=vector(length = 5)
+noeuds[1,1]=noeuds_s[1,1]
+noeuds[1,2]=noeuds_s[1,2]
+noeuds[1,3]=noeuds_s[1,3]
+noeuds[1,4]=noeuds_s[1,4]
+noeuds[1,5]=noeuds_s[1,5]
+
+for (i in 2:a2) {
+  if(noeuds[(c2-1),1]!=noeuds_s[i,1]){
+    for (j in 1:5) {
+      boite[j]=noeuds_s[i,j]
+    }
+    noeuds=rbind(noeuds,boite)
+    c2=c2+1
+  }
+  else if(noeuds[(c2-1),2]=="NA"|noeuds[(c2-1),3]=="NA"|noeuds[(c2-1),4]=="NA"|noeuds[(c2-1),5]=="NA"){
+    c2=c2-1
+    for (j in 1:5) {
+      noeuds[c2,j]=noeuds_s[i,j]
+    }
+    c2=c2+1
+  }
+}
+colnames(noeuds)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
+noeuds=data.frame(noeuds)

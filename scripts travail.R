@@ -188,7 +188,6 @@ noeuds[1,2]=noeuds_s[1,2]
 noeuds[1,3]=noeuds_s[1,3]
 noeuds[1,4]=noeuds_s[1,4]
 noeuds[1,5]=noeuds_s[1,5]
-
 for (i in 2:a2) {
   if(noeuds[(c2-1),1]!=noeuds_s[i,1]){
     for (j in 1:5) {

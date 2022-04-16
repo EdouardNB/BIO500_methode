@@ -1,5 +1,4 @@
-setwd("C:/Users/menui/Desktop/Université/Méthode en écologie computationnelle")
-setwd("C:/Users/king_/OneDrive/Documents/computationnelle/BIO500_session/donnees_BIO500") #mettre son SetWD
+setwd("C:/Users/menui/Desktop/Université/Méthode en écologie computationnelle/donnees_BIO500")
 # installation des packages
 install.packages("RSQLite")
 install.packages("dplyr")
@@ -214,7 +213,23 @@ gn <- graph.adjacency(noeuds)
 plot(gn)
 gc <- graph.adjacency(cours)
 head(noeuds)
+ 
 
+coll_BIO500=subset(coll,sigle=="BIO500")
+etudiant_Bio500=c(coll_BIO500$etudiant1,coll_BIO500$etudiant2)
+etudiant_Bio500=unique(etudiant_Bio500)
+e=nrow(coll)
+d=length(etudiant_Bio500)
+n_noeuds=vector(length = d)
+for (i in 1:d) {
+  n_noeuds[i]=0
+  for (j in 1:e) {
+    if(etudiant_Bio500[i]==coll[j,1]){
+      n_noeuds[i]==n_noeuds[i]+1
+    }
+  }
+}
+n_coll=cbind(etudiant_Bio500,n_noeuds)
 
 
 L=  table(coll$etudiant1, coll$etudiant2)

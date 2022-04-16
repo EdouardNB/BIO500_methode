@@ -222,3 +222,17 @@ head(L)
 g = graph.adjacency(L) 
 V(g)$size = 1.5
 plot(g,vertex.label=NA, edge.arrow.mode = 0, vertex.frame.color =2, layout=layout.kamada.kawai(g) )
+
+#script analyse 
+
+#Analyse graphique
+hist(n500, prob=T)
+curve(dnorm(nrow(n500),mean(n500),sd(n500)), add=T, col="red")
+
+#Analyse statistique    
+#Test de Shapiro-Wilk
+#H0: les données sont normales
+#H1: les données ne sont pas normales
+#Donc si p > 0.05, on ne rejete pas H0:Nos données sont donc normales
+
+shapiro.test(n500)

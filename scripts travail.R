@@ -1,6 +1,15 @@
 setwd("C:/Users/menui/Desktop/Université/Méthode en écologie computationnelle")
+setwd("C:/Users/king_/OneDrive/Documents/computationnelle/BIO500_session/donnees_BIO500") #mettre son SetWD
+# installation des packages
+install.packages("RSQLite")
+install.packages("dplyr")
+install.packages("rmarkdown")
+install.packages("tinytex")
+install.packages("targets")
+
 library(RSQLite)
 con <- dbConnect(SQLite(), dbname="equipe.db")
+#creation de la table de noeud
 noeuds_sql<- '
 CREATE TABLE noeuds (
 nom_prenom VARCHAR(50),
@@ -13,6 +22,7 @@ PRIMARY KEY (nom_prenom)
 dbSendQuery(con, noeuds_sql)
 dbListTables(con)
 
+#Création table cours
 cours_sql<-'
 CREATE TABLE cours (
 sigle CHAR(6),
@@ -26,6 +36,7 @@ PRIMARY KEY (sigle)
 dbSendQuery(con,cours_sql)
 dbListTables(con)
 
+#Création taable de collaboration
 collaboration_sql<-'
 CREATE TABLE collaborations (
 etudiant1 VARCHAN(50),
@@ -41,8 +52,8 @@ dbSendQuery(con,collaboration_sql)
 dbListTables(con)
 
 #Données
-setwd("C:/Users/menui/Desktop/Université/Méthode en écologie computationnelle/donnees_BIO500")
 library("dplyr")
+#manipulation table collaboration
 coll1_r=read.table("collaboration_Alexis_Nadya_Edouard_Penelope.txt",header=TRUE)
 coll1=distinct(coll1_r)
 colnames(coll1)<-c("etudiant1","etudiant2","sigle","date")
@@ -74,6 +85,7 @@ coll9=distinct(coll9_r)
 colnames(coll9)<-c("etudiant1","etudiant2","sigle","date")
 coll=rbind(coll1,coll2,coll3,coll4,coll5,coll6,coll7,coll8,coll9)
 
+#manipulation table cours
 cours1=read.table("Cours_Alexis_Nadya_Edouard_Penelope.txt",header=TRUE)
 colnames(cours1)<-c("sigle","credits","obligatoire","laboratoire","libre")
 cours2=read.csv2("cours_amelie.csv")
@@ -142,11 +154,12 @@ for(i in 2:a){
 }
 cours=cours[,-6]
 
+#manipulation table noeuds
 noeuds1=read.table("etudiant_Alexis_Nadya_Edouard_Penelope.txt",header=TRUE)
 colnames(noeuds1)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
 noeuds2=read.csv2("noeuds_amelie.csv")
 colnames(noeuds2)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
-noeuds3=read.table("noeuds_anthonystp.txt",header=TRUE,sep=";")
+noeuds3=read.table("noeuds_anthonystp .txt",header=TRUE,sep=";")
 colnames(noeuds3)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
 noeuds4=read.csv2("noeuds_DP-GL-LB-ML-VQ_txt.csv")
 colnames(noeuds4)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
@@ -166,7 +179,6 @@ noeuds_NA=noeuds_r
 noeuds_NA[is.na(noeuds_NA)] = "NA"
 noeuds_e=distinct(noeuds_NA)
 a2=nrow(noeuds_e)
-noeuds_e=cbind(noeuds_e,n2)
 noeuds_s=noeuds_e[order(noeuds_e$nom_prenom), ]
 noeuds=matrix(ncol=5,nrow=1)
 c=2
@@ -195,3 +207,18 @@ for (i in 2:a2) {
 colnames(noeuds)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
 noeuds=data.frame(noeuds)
 noeuds[noeuds=="NA"]<- NA
+
+install.packages("igraph")
+library(igraph)
+gn <- graph.adjacency(noeuds)
+plot(gn)
+gc <- graph.adjacency(cours)
+head(noeuds)
+
+
+
+L=  table(coll$etudiant1, coll$etudiant2)
+head(L)
+g = graph.adjacency(L) 
+V(g)$size = 1.5
+plot(g,vertex.label=NA, edge.arrow.mode = 0, vertex.frame.color =2, layout=layout.kamada.kawai(g) )

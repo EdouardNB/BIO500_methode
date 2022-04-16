@@ -221,11 +221,11 @@ etudiant_Bio500=unique(etudiant_Bio500)
 e=nrow(coll)
 d=length(etudiant_Bio500)
 n_noeuds=vector(length = d)
+n_noeuds[is.na(n_noeuds)] <- 0
 for (i in 1:d) {
-  n_noeuds[i]=0
   for (j in 1:e) {
     if(etudiant_Bio500[i]==coll[j,1]){
-      n_noeuds[i]==n_noeuds[i]+1
+      n_noeuds[i]=n_noeuds[i]+1
     }
   }
 }

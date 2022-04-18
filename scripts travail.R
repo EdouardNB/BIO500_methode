@@ -40,12 +40,12 @@ collaboration_sql<-'
 CREATE TABLE collaborations (
 etudiant1 VARCHAN(50),
 etudiant2 VARCHAN(50),
-cours CHAR(6),
+sigle CHAR(6),
 date DATE(3),
-PRIMARY KEY (etudiant1, etudiant2, cours),
+PRIMARY KEY (etudiant1, etudiant2, sigle),
 FOREIGN KEY (etudiant1) REFERENCES noeuds(nom_prenom),
 FOREIGN KEY (etudiant2) REFERENCES noeuds(nom_prenom),
-FOREIGN KEY (cours) REFERENCES cours(sigle)
+FOREIGN KEY (sigle) REFERENCES cours(sigle)
 );'
 dbSendQuery(con,collaboration_sql)
 dbListTables(con)
@@ -158,7 +158,7 @@ noeuds1=read.table("etudiant_Alexis_Nadya_Edouard_Penelope.txt",header=TRUE)
 colnames(noeuds1)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
 noeuds2=read.csv2("noeuds_amelie.csv")
 colnames(noeuds2)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
-noeuds3=read.table("noeuds_anthonystp .txt",header=TRUE,sep=";")
+noeuds3=read.table("noeuds_anthonystp.txt",header=TRUE,sep=";")
 colnames(noeuds3)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
 noeuds4=read.csv2("noeuds_DP-GL-LB-ML-VQ_txt.csv")
 colnames(noeuds4)<-c("nom_prenom","annee_debut","session_debut","programme","coop")
@@ -218,6 +218,8 @@ head(noeuds)
 coll_BIO500=subset(coll,sigle=="BIO500")
 etudiant_Bio500=c(coll_BIO500$etudiant1,coll_BIO500$etudiant2)
 etudiant_Bio500=unique(etudiant_Bio500)
+etudiant_Bio500=sort(etudiant_Bio500)
+etudiant_Bio500[33]="plewenski_david"
 e=nrow(coll)
 d=length(etudiant_Bio500)
 n_noeuds=vector(length = d)
@@ -230,7 +232,11 @@ for (i in 1:d) {
   }
 }
 n_coll=cbind(etudiant_Bio500,n_noeuds)
+n_coll=data.frame(n_coll)
 
+dbWriteTable(con, append = TRUE, name = "noeuds", value = noeuds, row.names = FALSE)
+dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALSE)
+dbWriteTable(con, append = TRUE, name = "collaborations", value = coll, row.names = FALSE)
 
 L=  table(coll$etudiant1, coll$etudiant2)
 head(L)
@@ -238,11 +244,55 @@ g = graph.adjacency(L)
 V(g)$size = 1.5
 plot(g,vertex.label=NA, edge.arrow.mode = 0, vertex.frame.color =2, layout=layout.kamada.kawai(g) )
 
+#Distance entre chancun des noeuds
+D=distances(g)
+print(D)
+D2=data.frame(D)
+N=ncol(D2)
+R=row.names(D2)
+C=names(D2)
+Distances_BIO500=matrix(nrow=d,ncol=d)
+for (k in 1:47) {
+  for (i in 1:N) {
+    if(C[i]==etudiant_Bio500[k]){
+      for (l in 1:47) {
+        for (j in 1:N) {
+          if(R[j]==etudiant_Bio500[l]){
+            Distances_BIO500[l,k]=D2[j,i]
+          }
+        }
+      }
+    }
+  }
+}
+row.names(Distances_BIO500)=etudiant_Bio500
+colnames(Distances_BIO500)=etudiant_Bio500
+
+n_distance<- function(n) {
+  d1=vector(length = 47)
+  for (i in 1:47) {
+    n_short[i]=0 
+    for (j in 1:47) {
+      if(Distances_BIO500[j,i]==n){
+        n_short[i]=n_short[i]+1
+      }
+    }
+  }
+  m_distance=cbind(etudiant_Bio500,n_short)
+  m_distance=data.frame(m_distance)
+  return(m_distance)
+}
+d1=n_distance(1)
+d2=n_distance(2)
+d3=n_distance(3)
+d4=n_distance(4)
+
 #script analyse 
 
 #Analyse graphique
 hist(n500, prob=T)
 curve(dnorm(nrow(n500),mean(n500),sd(n500)), add=T, col="red")
+
 
 #Analyse statistique    
 #Test de Shapiro-Wilk

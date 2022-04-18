@@ -268,13 +268,18 @@ for (k in 1:47) {
 row.names(Distances_BIO500)=etudiant_Bio500
 colnames(Distances_BIO500)=etudiant_Bio500
 
+#Analyse des distances
 n_distance<- function(n) {
-  d1=vector(length = 47)
-  for (i in 1:47) {
+  n_short=vector(length = d)
+  for (i in 1:d) {
     n_short[i]=0 
-    for (j in 1:47) {
-      if(Distances_BIO500[j,i]==n){
-        n_short[i]=n_short[i]+1
+    for (j in 1:N) {
+      if(C[j]==etudiant_Bio500[i]){
+        for (k in 1:N) {
+          if(D2[k,j]==n){
+            n_short[i]=n_short[i]+1
+          }
+        }
       }
     }
   }
@@ -283,9 +288,36 @@ n_distance<- function(n) {
   return(m_distance)
 }
 d1=n_distance(1)
+d1$n_short=as.numeric(d1$n_short)
 d2=n_distance(2)
+d2$n_short=as.numeric(d2$n_short)
 d3=n_distance(3)
+d3$n_short=as.numeric(d3$n_short)
 d4=n_distance(4)
+d4$n_short=as.numeric(d4$n_short)
+d5=n_distance(5)
+d5$n_short=as.numeric(d5$n_short)
+
+#Graph de BIO500
+BIO500=matrix(nrow = d,ncol = d)
+for (k in 1:47) {
+  for (i in 1:N) {
+    if(C[i]==etudiant_Bio500[k]){
+      for (l in 1:47) {
+        for (j in 1:N) {
+          if(R[j]==etudiant_Bio500[l]){
+            BIO500[l,k]=L[j,i]
+          }
+        }
+      }
+    }
+  }
+}
+row.names(BIO500)=etudiant_Bio500
+colnames(BIO500)=etudiant_Bio500
+g_BIO500=graph.adjacency(BIO500)
+V(g_BIO500)$size = 10
+plot(g_BIO500,vertex.label=NA, edge.arrow.mode = 0, vertex.frame.color =2, layout=layout.kamada.kawai(g_BIO500) )
 
 #script analyse 
 

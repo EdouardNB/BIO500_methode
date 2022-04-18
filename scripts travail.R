@@ -287,6 +287,21 @@ n_distance<- function(n) {
   m_distance=data.frame(m_distance)
   return(m_distance)
 }
+
+n_dBIO500<- function(n) {
+  n_short=vector(length = d)
+  for (i in 1:d) {
+    n_short[i]=0 
+    for (j in 1:d) {
+      if(Distances_BIO500[j,i]==n){
+        n_short[i]=n_short[i]+1
+      }
+    }
+  }
+  m_distance=cbind(etudiant_Bio500,n_short)
+  m_distance=data.frame(m_distance)
+  return(m_distance)
+}
 d1=n_distance(1)
 d1$n_short=as.numeric(d1$n_short)
 d2=n_distance(2)
@@ -297,6 +312,15 @@ d4=n_distance(4)
 d4$n_short=as.numeric(d4$n_short)
 d5=n_distance(5)
 d5$n_short=as.numeric(d5$n_short)
+
+d1_BIO500=n_dBIO500(1)
+d1_BIO500$n_short=as.numeric(d1_BIO500$n_short)
+d2_BIO500=n_dBIO500(2)
+d2_BIO500$n_short=as.numeric(d2_BIO500$n_short)
+d3_BIO500=n_dBIO500(3)
+d3_BIO500$n_short=as.numeric(d3_BIO500$n_short)
+d4_BIO500=n_dBIO500(4)
+d4_BIO500$n_short=as.numeric(d4_BIO500$n_short)
 
 #Graph de BIO500
 BIO500=matrix(nrow = d,ncol = d)

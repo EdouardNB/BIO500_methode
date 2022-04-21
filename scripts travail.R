@@ -1,4 +1,4 @@
-setwd("C:/Users/menui/Desktop/Université/Méthode en écologie computationnelle/donnees_BIO500")
+setwd("C:/Users/menui/Desktop/Universite/Methode_en_ecologie_computationnelle/donnees_BIO500")
 # installation des packages
 install.packages("RSQLite")
 install.packages("dplyr")
@@ -239,14 +239,12 @@ dbWriteTable(con, append = TRUE, name = "cours", value = cours, row.names = FALS
 dbWriteTable(con, append = TRUE, name = "collaborations", value = coll, row.names = FALSE)
 
 L=  table(coll$etudiant1, coll$etudiant2)
-head(L)
 g = graph.adjacency(L) 
 V(g)$size = 1.5
 plot(g,vertex.label=NA, edge.arrow.mode = 0, vertex.frame.color =2, layout=layout.kamada.kawai(g) )
 
 #Distance entre chancun des noeuds
 D=distances(g)
-print(D)
 D2=data.frame(D)
 N=ncol(D2)
 R=row.names(D2)
@@ -337,6 +335,15 @@ for (k in 1:47) {
     }
   }
 }
+
+Distance_moyenne=matrix(nrow = d,ncol=2)
+Distance_moyenne[,1]=etudiant_Bio500
+for (i in 1:d) {
+  Distance_moyenne[i,2]=mean(D2[,i])
+  
+}
+barbeau_juliette
+
 row.names(BIO500)=etudiant_Bio500
 colnames(BIO500)=etudiant_Bio500
 g_BIO500=graph.adjacency(BIO500)
@@ -346,8 +353,17 @@ plot(g_BIO500,vertex.label=NA, edge.arrow.mode = 0, vertex.frame.color =2, layou
 #script analyse 
 
 #Analyse graphique
-hist(n500, prob=T)
-curve(dnorm(nrow(n500),mean(n500),sd(n500)), add=T, col="red")
+hist(d1$n_short, prob=T)
+
+hist(d1$n_short, main="Liaison entre les étudiants de Bio500", xlab="Nombre de partenaire de travail", ylab="Fréquence")
+
+barplot(d1$n_short ~ d1$etudiant_Bio500, main="Partenaire par étudiant du cours Bio500", xlab="",ylab="Quantité de partenaire",las=2,cex.names=0.54)
+
+
+
+Distance_moyenne[,2]=as.numeric(Distance_moyenne[,2])
+barplot(Distance_moyenne[,2])
+barplot(d1$n_short)
 
 
 #Analyse statistique    
@@ -356,4 +372,4 @@ curve(dnorm(nrow(n500),mean(n500),sd(n500)), add=T, col="red")
 #H1: les données ne sont pas normales
 #Donc si p > 0.05, on ne rejete pas H0:Nos données sont donc normales
 
-shapiro.test(n500)
+shapiro.test(d1$n_short)

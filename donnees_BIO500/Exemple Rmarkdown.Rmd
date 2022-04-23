@@ -1,0 +1,75 @@
+---
+title: "Exercice du Bloc 2"
+author: "Menuisix"
+date: "29/03/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Un titre
+
+Ceci est du texte
+
+Je continue avec une liste
+
+- item 1
+- item 2
+- item 3
+
+## Une énumération
+
+1. item 1
+2. item 2
+3. item 3
+
+## Exemple de tableau
+
+| Time | Session | Topic |
+|:--------------|:-------:|---------:|
+| _left_ | _center_| _right_ |
+| 01:00 - 01:50 | 1 | Anatomy |
+| 01:50 - 02:00 | | *Break* |
+| 02:00 - 02:45 | 2 | Tables |
+| 02:45 - 03:00 | | *Break* |
+
+## Exemple de code chunk
+Le code R doit être à l'intérieur d'un bloc de code (*code chunk*). Par exemple:
+```{r}
+data(iris)
+iris_setosa <- subset(iris, Species == 'setosa')
+head(iris_setosa)
+```
+
+Graphique
+
+```{r}
+data(iris)
+plot(iris$Sepal.Length, iris$Sepal.Width)
+```
+
+Code avec du texte
+
+le jeu de données *iris* comprend `r length(unique(iris$Species))` espèces
+avec un total de `r nrow(iris)` fleurs mesurées.
+
+# R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

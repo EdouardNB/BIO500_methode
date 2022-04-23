@@ -1,19 +1,35 @@
 setwd("C:/Users/menui/Desktop/Universite/Methode_en_ecologie_computationnelle/.git/Travail_equipe/BIO500_methode")
 library(targets)
 library(visNetwork)
-tar_option_set(packages = c("igraph","dplyr"))
-
+library(igraph)
+source("scripts travail.R")
 list(
   tar_target(
-    data,
-    read.table("nombre_de_partenaire.txt", header = T)
+    data_1,
+    n_distance(1)
   ),
   tar_target(
+    etudiant,
+    data_1$etudiant_Bio500
+  ),
+  tar_target(
+    n_d1,
+    as.numeric(data_1$n_short)
+  ),
+  tar_target(
+    g_BIO500,
+    graph_du_groupe(L)
+  ),  
+  tar_target(
+      resultat_test,
+      shapiro.test(n_d1)
+    ),
+  tar_target(
     histdn,
-    hist(data$n_short, main="Liaison entre les étudiants de Bio500", xlab="Nombre de partenaire de travail", ylab="Fréquence"),
+    hist(n_d1, main="Liaison entre les étudiants de Bio500", xlab="Nombre de partenaire de travail", ylab="Fréquence"),
   ),
   tar_target(
     Barplot,
-    barplot(data$n_short ~ data$etudiant_Bio500, main="Partenaire par étudiant du cours Bio500", xlab="",ylab="Quantité de partenaire",las=2,cex.names=0.54)
+    barplot(n_d1, main="Partenaire par étudiant du cours Bio500", names.arg=etudiant, xlab="",ylab="Quantité de partenaire",las=2,cex.names=0.54)
   )
 )

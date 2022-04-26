@@ -1,9 +1,9 @@
 create_SQL<-function(noeuds,cours,coll){
 con <- dbConnect(SQLite(), dbname="equipe.db")
-dbSendQuery(con, "DROP TABLE noeud;")
+dbSendQuery(con, "DROP TABLE noeuds;")
 #creation de la table de noeud
 noeuds_sql<- '
-CREATE TABLE noeud (
+CREATE TABLE noeuds (
 nom_prenom VARCHAR(50),
 annee_debut DATE(4),
 session_debut CHAR(1),

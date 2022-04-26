@@ -11,7 +11,6 @@ source("Data noeuds.R")
 source("Table SQL.R")
 source("Requete SQL.R")
 source("Requete SQL2.R")
-source("graphiquedeconnectiviteetudiant")
 list(
   tar_target(
     coll,

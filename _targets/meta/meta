@@ -1,4 +1,20 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
 Barplot|stem|936ab5941ae327e2|197630fa47992ef1|926300162e57b1dc|-933423644||t19103.8973225748s|5a06dc10d9e6457c|237|rds|local|vector|||0.31||
+clean_cours|function|515a180cf7afb6b8|||||||||||||||
+clean_noeuds|function|bb18a236ab4bc9ca|||||||||||||||
+coll|stem|1fa678c21cbd3251|e60d901c0e70cce3|fe96a76660fe4ad8|120665022||t19108.7974251058s|ac0b7bb01544bc7a|10859|rds|local|vector|||0.16||
+cours|stem|3d45eef3fe926d47|2d330299ab6109f3|3d3828ff2c5bc51f|-1351517523||t19108.7974674809s|91f280ce9b28bd01|496|rds|local|vector|||3.23||
+cours_raw|stem|70a8431c7b8db436|13692f6dccac99c2|4c226c40caae6a5b|-285545267||t19108.7974285804s|3db18519d6c7e62b|887|rds|local|vector|||0.12||
+create_SQL|function|97a4103d82cf3a2d|||||||||||||||
 data|stem|06cc92bf229d28b9|5cea16b1366411c3|5cb42b57398551be|1588979285||t19103.8955872367s|af49fba42c4bb99d|832|rds|local|vector|||0.2||
+data_cours|function|23a3dc163ecf8f42|||||||||||||||
+data_noeuds|function|8e3ef2c09fe53c3b|||||||||||||||
+datacoll|function|0f1b84a0f5a444b2|||||||||||||||
 histdn|stem|76209e8a3a6a9ad4|2e53caab3b33f055|25e706ad0511c49c|1490692442||t19103.8973228063s|7a605c2f99fcc9b4|278|rds|local|vector|||0.02||
+nb_collab|stem|8bb2524966819bb2|e915a572c468e69c|1f822578dce9f824|1782662328||t19108.8892416763s|615da626f860d02f|2324|rds|local|vector|||0.03||
+noeuds|stem|82f6e41c4d2431e2|ec659605a3ab5de7|bc262c3289bd8f65|1489872263||t19108.797429827s|512dd3d43fe6fafa|3224|rds|local|vector|||0.09||
+noeuds_raw|stem|a81c03f0c4a7d556|0bbb760edee5c0cc|80c3e485b2ed17b3|-567537771||t19108.7974269528s|79b7f8837423c010|3090|rds|local|vector|||0.13||
+requete1|function|3c6f8a7ec34113c2|||||||||||||||
+requete2|function|1ebc02ad4e2d3670|||||||||||||||
+reseau_collab|stem|ffa446978381225b|5e9c311306e7dd0d|15c6b72bb211bf4f|1350247394||t19108.8892425882s|8e95dd4d3745b3e1|8079|rds|local|vector|||0.06||
+SQL|stem|c8f6131982d9fe2c|5134b97884d4cb48|75bdda6a90d64132|-901784204||t19108.8122254705s|847254d8bfdd0634|305|rds|local|vector|||0.24|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|

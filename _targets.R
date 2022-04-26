@@ -1,4 +1,5 @@
 #setwd("C:/Users/menui/Desktop/Universite/Methode_en_ecologie_computationnelle/.git/Travail_equipe/BIO500_methode")
+
 library(targets)
 library(visNetwork)
 library(igraph)
@@ -9,6 +10,8 @@ source("Data cours.R")
 source("Data noeuds.R")
 source("Table SQL.R")
 source("Requete SQL.R")
+source("Requete SQL2.R")
+source("graphiquedeconnectiviteetudiant")
 list(
   tar_target(
     coll,
@@ -36,6 +39,10 @@ list(
   ),
   tar_target(
     nb_collab,
-    requete1(SQL)
+    requete1()
+  ),
+  tar_target(
+    reseau_collab,
+    requete2()
   )
-)
+)  

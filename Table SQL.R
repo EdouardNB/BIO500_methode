@@ -1,6 +1,6 @@
-create_SQL<-function(noeuds,cours,coll){
+create_SQL<-function(noeuds,cours,coll,connectionSQL){
 con <- dbConnect(SQLite(), dbname="equipe.db")
-dbSendQuery(con, "DROP TABLE noeuds;")
+#dbSendQuery(con, "DROP TABLE noeuds;")
 #creation de la table de noeud
 noeuds_sql<- '
 CREATE TABLE noeuds (
@@ -14,7 +14,7 @@ PRIMARY KEY (nom_prenom)
 dbSendQuery(con, noeuds_sql)
 
 #Création table cours
-dbSendQuery(con, "DROP TABLE cours;")
+#dbSendQuery(con, "DROP TABLE cours;")
 cours_sql<-'
 CREATE TABLE cours (
 sigle CHAR(6),
@@ -28,7 +28,7 @@ PRIMARY KEY (sigle)
 dbSendQuery(con,cours_sql)
 
 #Création taable de collaboration
-dbSendQuery(con, "DROP TABLE collaborations;")
+#dbSendQuery(con, "DROP TABLE collaborations;")
 collaboration_sql<-'
 CREATE TABLE collaborations (
 etudiant1 VARCHAN(50),

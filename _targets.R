@@ -4,12 +4,17 @@ library(visNetwork)
 library(igraph)
 library(dplyr)
 library(RSQLite)
+library(tarchetypes)
 source("Data collab.R")
 source("Data cours.R")
 source("Data noeuds.R")
 source("Table SQL.R")
 source("Requete SQL.R")
 source("Requete SQL2.R")
+source("shapiro.R")
+source("diagrammesabande.R")
+source("connectionsql.R")
+source("histogramme.R")
 source("igraph.R")
 list(
   tar_target(
@@ -33,8 +38,12 @@ list(
    clean_noeuds(noeuds_raw) 
   ),
   tar_target(
+    connectionSQL,
+    conSQL()
+  ),
+  tar_target(
     SQL,
-    create_SQL(noeuds,cours,coll)
+    create_SQL(noeuds,cours,coll,connectionSQL)
   ),
   tar_target(
     nb_collab,
@@ -46,14 +55,26 @@ list(
   ),
   tar_target(
     table_nbrecollab,
-    read.table("donnees_BIO500/nbrecollaboration", header=T)
+    read.csv("donnees_BIO500/nbrecollaboration", header=T)
   ),
   tar_target(
     table_collabo,
-    read.table("donnees_BIO500/requetecollaboration", header=T)
+    read.csv("donnees_BIO500/requetecollaboration", header=T)
+  ),
+  tar_target(
+    Shapiro,
+    teststat(table_nbrecollab)
+  ),
+  tar_target(
+    Barplot,
+    bplot(table_nbrecollab)
+  ),
+  tar_target(
+    Histogramme,
+    histo(table_nbrecollab)
   ),
   tar_target(
     igraphh,
-    graphadj(requetecollaboration)
+    graphadj(table_collabo)
   )
 ) 

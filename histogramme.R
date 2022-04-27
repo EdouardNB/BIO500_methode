@@ -1,4 +1,3 @@
-histo<-function(nbrecollaboration){
-  nbrecollaboration <- as.numeric(nbrecollaboration) 
-  hist(nbrecollaboration$nb_collab)
+histo<-function(table_nbrecollab){
+  hist(table_nbrecollab$nb_collab)
 }

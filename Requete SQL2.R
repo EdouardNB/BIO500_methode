@@ -1,8 +1,7 @@
 requete2<-function(){
 con <- dbConnect(SQLite(), dbname="equipe.db")
 sql_requete2 <-"
-SELECT etudiant1, etudiant2
-FROM collaborations
+SELECT etudiant1, etudiant2 FROM collaborations
 ;"
   
 reseau_collab<-dbGetQuery(con,sql_requete2)

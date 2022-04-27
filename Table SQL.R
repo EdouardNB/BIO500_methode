@@ -45,5 +45,4 @@ dbSendQuery(con,collaboration_sql)
 dbWriteTable(con, overwrite = TRUE, name = "noeud", value = noeuds, row.names = FALSE)
 dbWriteTable(con, overwrite = TRUE, name = "cours", value = cours, row.names = FALSE)
 dbWriteTable(con, overwrite = TRUE, name = "collaborations", value = coll, row.names = FALSE)
-return(con)
 }

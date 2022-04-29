@@ -12,19 +12,13 @@ author:
   - name: Nadia Tardy
     affiliation: "a"
 
-  address:
+address:
   - code: "a"
     address: "Université de Sherbrooke, Départment de bio, 2500 Boulevard de l'Université, Sherbrooke, Québec, G1V 0A9"
 
 abstract: |
   Please provide an abstract of no more than 250 words in a single paragraph. Abstracts should explain to the general reader the major contributions of the article. References in the abstract must be cited in full within the abstract itself and cited in the text.
 
-keywords:
-  - one
-  - two
-  - optional
-  - optional
-  - optional
 
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
 pnas_type: pnasresearcharticle

@@ -32,8 +32,11 @@ lineno: false
 output: rticles::pnas_article
 ---
 
+# Introduction 
+
 La notion de réseau écologique d'un écosystème est souvent déformée et confondue avec celle de réseau trophique. Nous avons régulièrement tendance à imager les interactions entre les différentes espèces avec une belle pyramide qui retrace les réseaux trophiques et la chaîne alimentaire en plaçant le plus important prédateur au sommet du prisme. En réalité, un réseau écologique inclut toutes les multitudes interactions possibles entre les espèces comme le mutualisme, la compétition, le commensalisme et le parasitisme (Fortuna & al. 2013). Évidemment, les réseaux trophiques ont une grande influence sur le réseau écologique, mais ce dernier ne devrait pas être représenté par une pyramide. Il devrait plutôt être décrit comme une toile ("web") avec les espèces clés de l'écosystème au centre, c'est-à-dire les espèces qui ont le plus grand nombre de connexions interspécifiques. On retrouve également dans la littérature les propriété de petit monde que l’on peut découvrir dans les réseaux (Watts et Strogatz, 1998). C'est dans ce contexte que nous avons voulu comparer le réseau de collaboration entre les étudiants en écologie et  le réseau écologique. Afin d'approfondir notre réflexion, nous avons voulu vérifier si le nombre de collaborations par étudiant de BIO500 sont semblables ou bien s'il y a des "étudiants clés", c'est-à-dire qui possèdent le plus de collaborations différentes au même titre qu'une espèce clé. 
 
+# Méthode
 
 Avant même de se pencher sur nos questions, il a fallu que chacun des étudiants de BIO500 recense l'entièreté des étudiants avec qui il ou elle a collaboré dans un travail d'équipe pendant son parcours académique en écologie à l'Université de Sherbrooke. Une fois les données recueillies et traitées, nous avions toutes les informations en main pour commencer notre analyse. Afin de comparer en général le réseau étudiant et les réseaux écologiques, nous avons généré deux figures: le réseaux de liens des étudiants de BIO500 et leur collaboration Figure 1 ainsi qu’un histogramme qui recense tous les étudiants (incluant ceux qui ne sont pas dans BIO500) et leur nombre total de collaboration Figure 2.
 
@@ -66,6 +69,8 @@ Hypothèse alternative (H1): les données n’ont pas une distribution normale
 
 La commande shapiro.test() est facile d’utilisation et sa sortie nous informe sur la valeur de W et le p-value. C’est seulement le p-value qui nous intéresse. Si p-value est plus petit que 0.05, on rejette l'hypothèse nulle: les données sont non normales. Si p-value est plus grand que 0,05, on ne rejette pas l’hypothèse nulle: les données ont donc une distribution normale.
  
+# Analyse et discussion
+
 La Figure 1 nous permet d’observer la complexité du réseau de collaboration. La dynamique entre les étudiants
 
 Dans la Figure 2, l’histogramme semble être asymétrique vers la gauche. On remarque que la grande majorité des élèves ont seulement moins de 5 collaborations. C’est logique: la majorité des élèves ne sont pas dans BIO500 et donc ils ont un petit nombre de collaborations. C’est pourquoi il est important de refaire la même analyse avec seulement les étudiants de BIO500: Figure 3.

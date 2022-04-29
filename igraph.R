@@ -24,6 +24,6 @@ graphadj_BIO500<-function(table_collabo,etudiant_BIO500,etudiant){
   row.names(BIO500)=etudiant_BIO500
   colnames(BIO500)=etudiant_BIO500
   g_BIO500=graph.adjacency(BIO500)
-  png(file = "igraph_BIO500.png")
+  png(file = "donnees_BIO500/igraph_BIO500.png")
   plot(g_BIO500, vertex.label = NA, edge.arrow.mode = 0, vertex.frame.color = NA, layout = layout_components(g_BIO500))  
 }

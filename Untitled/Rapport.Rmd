@@ -67,4 +67,6 @@ L’analyse statistique est effectuée par le test de Shapiro-Wilk dans lequel l
 - Hypothèse alternative (H1): les données n’ont pas une distribution normale
 
 La commande shapiro.test() est facile d’utilisation et sa sortie nous informe sur la valeur de W et le p-value. C’est seulement le p-value qui nous intéresse. Si p-value est plus petit que 0.05, on rejette l'hypothèse nulle: les données sont non normales. Si p-value est plus grand que 0,05, on ne rejette pas l’hypothèse nulle: les données ont donc une distribution normale.
+
+
  

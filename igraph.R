@@ -6,7 +6,7 @@ plot(g, vertex.label = NA, edge.arrow.mode = 0, vertex.frame.color = NA, layout 
 
 graphadj_BIO500<-function(table_collabo,etudiant_BIO500,etudiant){
   L=table(table_collabo$etudiant1,table_collabo$etudiant2)
-  C=order(etudiant$etudiant1)
+  C=sort(etudiant$etudiant1)
   BIO500=matrix(nrow = 47,ncol = 47)
   for (k in 1:47) {
     for (i in 1:222) {

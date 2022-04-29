@@ -71,6 +71,8 @@ La commande shapiro.test() est facile d’utilisation et sa sortie nous informe 
  
 # Analyse et discussion
 
+![Légende figure. \label{fig:plot1}]("BIO500_methode/donnees_BIO500/igraph_BIO500.png"){width=50% height=40%}
+
 La Figure 1 nous permet d’observer la complexité du réseau de collaboration. La dynamique entre les étudiants
 
 Dans la Figure 2, l’histogramme semble être asymétrique vers la gauche. On remarque que la grande majorité des élèves ont seulement moins de 5 collaborations. C’est logique: la majorité des élèves ne sont pas dans BIO500 et donc ils ont un petit nombre de collaborations. C’est pourquoi il est important de refaire la même analyse avec seulement les étudiants de BIO500: Figure 3.

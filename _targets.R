@@ -17,6 +17,7 @@ source("connectionsql.R")
 source("histogramme.R")
 source("igraph.R")
 source("listBIO500.R")
+source("histogrammeBIO500.R")
 list(
   tar_target(
     coll,
@@ -87,7 +88,11 @@ list(
     liste_etudiant()
   ),
   tar_target(
-    igraphh2,
+    igraph2,
     graphadj_BIO500(table_collabo,list_BIO500,table_nbrecollab)
+  ),
+  tar_target(
+    Histogramme2,
+    histogrammeBIO500(table_nbrecollab,list_BIO500)
   )
 ) 

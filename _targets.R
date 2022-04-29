@@ -17,6 +17,8 @@ source("connectionsql.R")
 source("histogramme.R")
 source("igraph.R")
 source("listBIO500.R")
+source("histogrammeBIO500.R")
+source("shapiro2.R")
 list(
   tar_target(
     coll,
@@ -87,7 +89,23 @@ list(
     liste_etudiant()
   ),
   tar_target(
-    igraphh2,
+    igraph2,
     graphadj_BIO500(table_collabo,list_BIO500,table_nbrecollab)
+  ),
+  tar_target(
+    Histogramme2,
+    histogrammeBIO500(table_nbrecollab,list_BIO500)
+  ),
+  tar_target(
+    table_nbrecollab_BIO500,
+    nbcollab2(table_nbrecollab,list_BIO500)
+  ),
+  tar_target(
+    Shapiro_BIO500,
+    Shapiro2(table_nbrecollab_BIO500)
+  ),
+  tar_target(
+    Barplot2,
+    bplot2(table_nbrecollab_BIO500)
   )
 ) 

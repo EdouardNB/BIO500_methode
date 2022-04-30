@@ -1,5 +1,5 @@
 ---
-title: Template for preparing your research report submission to PNAS using RMarkdown
+title: Les collaborations entre étudiants en écologie: un réseau semblable aux réseaux écologiques?
 
 # Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 author:
@@ -17,7 +17,8 @@ address:
     address: "Université de Sherbrooke, Départment de bio, 2500 Boulevard de l'Université, Sherbrooke, Québec, G1V 0A9"
 
 abstract: |
-  Please provide an abstract of no more than 250 words in a single paragraph. Abstracts should explain to the general reader the major contributions of the article. References in the abstract must be cited in full within the abstract itself and cited in the text.
+   Nous avons cherché à vérifier si le nombre de collaborations par étudiant de BIO500 sont semblables ou bien s'il y a des "étudiants clés''. Pour ce faire, nous avons effectué une analyse visuelle et graphique, puis en deuxième lieu une analyse statistique de notre distribution. La majorité des étudiants du cours BIO500 ont eu entre 10 et 25 collaborations et plus précisément entre 10 et 15. Seulement 2 étudiants ont entre 25 et 35 collaborations, soit Laura Béland, avec 34 collaborations et Édouard Nadon-Beaumier avec 29 collaborations. Les données des collaborations respectent une distribution normale, mais avec un p-value de 0.08508, très proche du seuil. 
+
 
 
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)

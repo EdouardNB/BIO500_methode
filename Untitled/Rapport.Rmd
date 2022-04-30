@@ -1,5 +1,5 @@
 ---
-title: Les collaborations entre étudiants en écologie: un réseau semblable aux réseaux écologiques?
+title: Les collaborations entre étudiants en écologie et leur ressemblable aux réseaux écologiques 
 
 # Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 author:

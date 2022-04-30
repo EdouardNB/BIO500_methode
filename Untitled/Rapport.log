@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.29)  29 APR 2022 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.29)  29 APR 2022 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -882,38 +882,42 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
 )) (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (./pnasresearcharticle.sty
+)
+\cslhangindent=\skip147
+\csllabelwidth=\skip148
+\cslentryspacingunit=\skip149
+(./pnasresearcharticle.sty
 Package: pnasresearcharticle 2018/05/06 v1.3 PNAS two column research article style
 \@float@every@sigstatement=\toks50
 \c@sigstatement=\count366
 ) (./Rapport.aux)
 \openout1 = `Rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 58.
+Package hyperref Info: Link coloring ON on input line 87.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -923,9 +927,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count367
 )
-LaTeX Info: Redefining \ref on input line 58.
-LaTeX Info: Redefining \pageref on input line 58.
-LaTeX Info: Redefining \nameref on input line 58.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
 (./Rapport.out) (./Rapport.out)
 \@outlinefile=\write4
 \openout4 = `Rapport.out'.
@@ -975,117 +979,112 @@ Package newfloat Info: `float' package detected.
 Package newfloat Info: `sidecap' package detected.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 58.
+(lastpage)             ! on input line 87.
 
 Package sidecap Warning: Package `ragged2e' not found -- expect bad formatting.
 
-LaTeX Info: Redefining \microtypecontext on input line 58.
-Package microtype Info: Applying patch `item' on input line 58.
-Package microtype Info: Applying patch `toc' on input line 58.
+LaTeX Info: Redefining \microtypecontext on input line 87.
+Package microtype Info: Applying patch `item' on input line 87.
+Package microtype Info: Applying patch `toc' on input line 87.
 
-Package microtype Warning: Unable to apply patch `eqnum' on input line 58.
+Package microtype Warning: Unable to apply patch `eqnum' on input line 87.
 
-Package microtype Info: Applying patch `footnote' on input line 58.
+Package microtype Info: Applying patch `footnote' on input line 87.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 58.
+LaTeX Info: Redefining \showhyphens on input line 87.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 66.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 95.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <9> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 66.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 95.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <22> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 66.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 66.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 95.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 95.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 66.
+(Font)              scaled to size 8.54997pt on input line 95.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.54997pt on input line 66.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 66.
+(Font)              scaled to size 8.54997pt on input line 95.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 95.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 66.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 95.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 66.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 95.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 66.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 95.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 66.
+(Font)              <9> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 66.
+(Font)              <6> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 66.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
+(Font)              <5> on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 5.69998pt on input line 66.
+(Font)              scaled to size 5.69998pt on input line 95.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 66.
+(Font)              scaled to size 6.64998pt on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 66.
+(Font)              <7> on input line 95.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 4.74998pt on input line 66.
+(Font)              scaled to size 4.74998pt on input line 95.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 68.
-Package mdframed Info: mdframed works in twoside mode on input line 121.
+(Font)              scaled to size 7.59998pt on input line 97.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 121.
+(Font)              scaled to size 9.49997pt on input line 104.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 121.
+(Font)              scaled to size 9.49997pt on input line 104.
+Package mdframed Info: mdframed works in twoside mode on input line 153.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 121.
+ mdframed uses option nobreak mdframed on input line 153.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 121.
+ mdframed uses option nobreak mdframed on input line 153.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 121.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 150.
-(/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) 
-AED: lastpage setting LastPage
+(Font)              scaled to size 5.69998pt on input line 153.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 168.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 168.
+(Font)              scaled to size 6.64998pt on input line 203.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 203.
 (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/psnfss/t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (/Users/pipirobert/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-bch.cfg
@@ -1093,23 +1092,97 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 ) [1{/Users/pipirobert/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
+]
+<../donnees_BIO500/igraph_BIO500.png, id=37, 481.8pt x 481.8pt>
+File: ../donnees_BIO500/igraph_BIO500.png Graphic file (type png)
+<use ../donnees_BIO500/igraph_BIO500.png>
+Package pdftex.def Info: ../donnees_BIO500/igraph_BIO500.png  used on input line 209.
+(pdftex.def)             Requested size: 252.84586pt x 270.37958pt.
+
+Overfull \hbox (6.749pt too wide) in paragraph at lines 209--211
+ [][] 
+ []
+
+<../donnees_BIO500/diagram_collab2.pdf, id=39, 505.89pt x 505.89pt>
+File: ../donnees_BIO500/diagram_collab2.pdf Graphic file (type pdf)
+<use ../donnees_BIO500/diagram_collab2.pdf>
+Package pdftex.def Info: ../donnees_BIO500/diagram_collab2.pdf  used on input line 219.
+(pdftex.def)             Requested size: 252.85173pt x 270.37444pt.
+
+Overfull \hbox (6.75487pt too wide) in paragraph at lines 219--220
+ [][] 
+ []
+
+<../donnees_BIO500/histoBIO500.pdf, id=40, 505.89pt x 505.89pt>
+File: ../donnees_BIO500/histoBIO500.pdf Graphic file (type pdf)
+<use ../donnees_BIO500/histoBIO500.pdf>
+Package pdftex.def Info: ../donnees_BIO500/histoBIO500.pdf  used on input line 230.
+(pdftex.def)             Requested size: 252.85173pt x 270.37444pt.
+
+Overfull \hbox (6.75487pt too wide) in paragraph at lines 230--231
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 267.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.64998pt on input line 267.
+[2 <../donnees_BIO500/igraph_BIO500.png> <../donnees_BIO500/diagram_collab2.pdf> <../donnees_BIO500/histoBIO500.pdf>]
+Overfull \hbox (0.69992pt too wide) in paragraph at lines 270--277
+\T1/lmr/m/n/9 (-20) notre curiosité nous a poussé à identifier les deux ``étudiants-clé''
+ []
+
+
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 280--284
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+
+ []
+
+
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 285--289
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--289
+
+ []
+
+
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 290--295
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--295
+
+ []
+
+
+AED: lastpage setting LastPage
+[3
+
 ] (./Rapport.aux)
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 647F008A796F7215EFDE1D1D996E7992;338.
  ) 
 Here is how much of TeX's memory you used:
- 29839 strings out of 480193
- 558314 string characters out of 5891971
- 880070 words of memory out of 5000000
- 47093 multiletter control sequences out of 15000+600000
- 541734 words of font info for 150 fonts, out of 8000000 for 9000
+ 29925 strings out of 480193
+ 559515 string characters out of 5891971
+ 883424 words of memory out of 5000000
+ 47125 multiletter control sequences out of 15000+600000
+ 552061 words of font info for 170 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  115i,14n,118p,1004b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}</Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Rapport.pdf (1 page, 138684 bytes).
+{/Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}</Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></Users/pipirobert/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Rapport.pdf (3 pages, 241202 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 500000)
- 54797 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 60980 words of extra memory for PDF output out of 61914 (max. 10000000)
 

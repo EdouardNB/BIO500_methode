@@ -19,6 +19,7 @@ source("igraph.R")
 source("listBIO500.R")
 source("histogrammeBIO500.R")
 source("shapiro2.R")
+source("nombre_cohorte.R")
 list(
   tar_target(
     coll,
@@ -106,6 +107,10 @@ list(
   ),
   tar_target(
     Barplot2,
-    bplot2(table_nbrecollab_BIO500)
+    bplot2(table_nbrecollab_BIO500,list_BIO500)
+  ),
+  tar_target(
+    nbcohorte59,
+    nbr_cohorte(noeuds,list_BIO500)
   )
 ) 

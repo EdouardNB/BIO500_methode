@@ -87,6 +87,6 @@ L’analyse statistique peut nous en dire plus. Le test de Shapiro-Wilk nous rel
 
 *“Étudiants-clés”* 
 
-Malgré avoir prouver la normalité de notre distribution, notre curiosité nous a poussé à identifier les deux “étudiants-clé” potentiels: Laura Béland et Édouard Nadon-Beaumier avec 34 et 29 collaborations. On peut considérer ces personnes les plus connectées dans le réseau: ils ont le plus de lien différents avec la totalité du réseau. Dans un réseau écologique, ils seraient les espèces les plus importantes pour garder l’intégrité du système puisqu’ils ont une large étendue de connexions. 
+Malgré avoir prouver la normalité de notre distribution, notre curiosité nous a poussé à identifier les deux “étudiants-clé” potentiels: Laura Béland et Édouard Nadon-Beaumier avec 34 et 29 collaborations. On peut considérer ces personnes les plus connectées dans le réseau: ils ont le plus de lien différents avec la totalité du réseau. Dans un réseau écologique, ils seraient les espèces les plus importantes pour garder l’intégrité du système puisqu’ils ont un large étendue de connexions. 
 
  

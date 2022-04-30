@@ -71,7 +71,7 @@ La commande shapiro.test() est facile d’utilisation et sa sortie nous informe 
  
 # Analyse et discussion
 
-![Légende figure. \label{fig:plot1}]("BIO500_methode/donnees_BIO500/igraph_BIO500.png"){width=50% height=40%}
+![Légende figure. \label{fig:plot1}]("../donnees_BIO500/histoBIO500.pdf"){width=50% height=40%}
 
 La Figure 1 nous permet d’observer la complexité du réseau de collaboration. La dynamique entre les étudiants
 
